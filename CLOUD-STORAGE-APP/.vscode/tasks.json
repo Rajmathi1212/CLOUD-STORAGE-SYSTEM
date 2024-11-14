@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "clean-dist",
+      "type": "shell",
+      "command": "npx rimraf dist"
+    },
+    {
+      "label": "generate-swagger",
+      "type": "shell",
+      "command": "npx ts-node src/swagger.ts"
+    },
+    {
+      "label": "compile-ts",
+      "type": "shell",
+      "command": "npx tsc"
+    },
+    {
+      "label": "copy-files",
+      "type": "shell",
+      "command": "npx copyfiles package.json .env dist"
+    },
+    {
+      "label": "pre-launch-tasks",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "clean-dist",
+        "generate-swagger",
+        "compile-ts",
+        "copy-files"
+      ]
+    }
+  ]
+}

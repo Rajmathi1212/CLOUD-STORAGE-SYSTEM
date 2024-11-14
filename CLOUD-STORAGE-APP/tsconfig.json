@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "Node16",
+    "target": "ES6",
+    "outDir": "dist",
+    "rootDir": "src",
+    "esModuleInterop": true,
+    "moduleResolution": "Node16",
+    "strict": false,
+    "skipLibCheck": true,
+    "baseUrl": "src",
+    "resolveJsonModule": true,
+    "resolvePackageJsonImports": true,
+    "sourceMap": true,
+    "importHelpers": true
+  },
+  "include": [
+    "src/**/*",
+    "package.json"
+  ]
+}
